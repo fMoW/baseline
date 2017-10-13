@@ -11,6 +11,7 @@ Keras 2.0.5
 
 Tensorflow 1.2.1
 
+tqdm
 
 ## Dataset
 
