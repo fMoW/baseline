@@ -1,6 +1,6 @@
 # fMoW: Functional Map of the World
 
-This code was developed by [JHU/APL](https://jhuapl.edu).
+This code was developed by [JHU/APL](http://www.jhuapl.edu).
 
 
 ## Dependencies
