@@ -61,7 +61,7 @@ class FMOWBaseline:
             if performAll or arg == '-test_cnn':
                 self.params.test_cnn = True
             if performAll or arg == '-test_lstm':
-                self.params.test_cnn = True
+                self.params.test_lstm = True
             
             if arg == '-nm':
                 self.params.use_metadata = False
