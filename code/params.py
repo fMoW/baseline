@@ -25,12 +25,13 @@ num_workers = cpu_count()
 
 use_metadata = True
 
-batch_size_cnn = 64
-batch_size_lstm = 64
+batch_size_cnn = 128
+batch_size_lstm = 512
 batch_size_eval = 128
-metadata_length = 21
+metadata_length = 45
 num_channels = 3
 cnn_last_layer_length = 4096
+cnn_lstm_layer_length = 2208
 
 target_img_size = (224,224)
 
@@ -45,10 +46,10 @@ test_lstm = False
 #LEARNING PARAMS
 cnn_adam_learning_rate = 1e-4
 cnn_adam_loss = 'categorical_crossentropy'
-cnn_epochs = 15
+cnn_epochs = 50
 	
 lstm_adam_learning_rate = 1e-4
-lstm_epochs = 5
+lstm_epochs = 100
 lstm_loss = 'categorical_crossentropy'
 
 #DIRECTORIES AND FILES
