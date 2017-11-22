@@ -1,10 +1,10 @@
 # fMoW: Functional Map of the World
 
-This code was developed by [JHU/APL](https://jhuapl.edu).
+This code was developed by [JHU/APL](http://www.jhuapl.edu).
 
 ## References
 
-If you use our dataset or code, please cite:
+If you use our dataset or code, please cite [our paper](https://arxiv.org/abs/1711.07846):
 
 ```
 @article{fmow2017,
