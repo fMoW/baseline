@@ -2,6 +2,18 @@
 
 This code was developed by [JHU/APL](https://jhuapl.edu).
 
+## References
+
+If you use our dataset or code, please cite:
+
+```
+@article{fmow2017,
+  title={Functional Map of the World},
+  author={Christie, Gordon and Fendley, Neil and Wilson, James and Mukherjee, Ryan},
+  journal={arXiv preprint arXiv:1711.07846},
+  year={2017}
+}
+```
 
 ## Dependencies
 
@@ -93,19 +105,6 @@ Our best performing model is the CNN-only approach, which sums predictions over 
 ## Pre-trained Models
 
 Pre-trained models can be found under Releases: [https://github.com/fMoW/baseline/releases](https://github.com/fMoW/baseline/releases)
-
-## References
-
-If you would like to cite this baseline, please reference:
-```
-@article{fmow2017,
-  title={Functional Map of the World},
-  author={Christie, Gordon and Fendley, Neil and Wilson, James and Mukherjee, Ryan},
-  journal={arXiv:TBD},
-  year={2017}
-}
-```
-**Note: This will be updated on Tuesday when published.**
 
 ## License
 
