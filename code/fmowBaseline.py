@@ -347,9 +347,9 @@ class FMOWBaseline:
                 
                 if self.params.test_lstm:
                     if self.params.use_metadata:
-                        codesMetadata = np.zeros((1, codesStats['max_temporal'], self.params.cnn_seq2seq_layer_length+self.params.metadata_length))
+                        codesMetadata = np.zeros((1, codesStats['max_temporal'], self.params.cnn_lstm_layer_length+self.params.metadata_length))
                     else:
-                        codesMetadata = np.zeros((1, codesStats['max_temporal'], self.params.cnn_seq2seq_layer_length))
+                        codesMetadata = np.zeros((1, codesStats['max_temporal'], self.params.cnn_lstm_layer_length))
 
                     timestamps = []
                     for codesIndex in range(currBatchSize):
