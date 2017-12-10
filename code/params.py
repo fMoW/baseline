@@ -30,7 +30,6 @@ batch_size_lstm = 512
 batch_size_eval = 128
 metadata_length = 45
 num_channels = 3
-cnn_last_layer_length = 4096
 cnn_lstm_layer_length = 2208
 
 target_img_size = (224,224)

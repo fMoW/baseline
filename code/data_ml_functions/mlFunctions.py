@@ -172,11 +172,11 @@ def _load_batch_helper(inputDict):
 
 def codes_metadata_generator(params, data, metadataStats, codesStats):
     """
-    Custom generator that yields a vector containign the 4096-d CNN codes output by ResNet50 and metadata features (if params set to use).
+    Custom generator that yields a vector containing the CNN codes output by DenseNet and metadata features (if params set to use).
     :param params: global parameters, used to find location of the dataset and json file
     :param data: list of objects containing the category labels and paths to CNN codes and images 
     :param metadataStats: metadata stats used to normalize metadata features
-    :yield (codesMetadata,labels): 4096-d CNN codes + metadata features (if set), and labels (categorical form) 
+    :yield (codesMetadata,labels): CNN codes + metadata features (if set), and labels (categorical form) 
     """
     
     N = len(data)
@@ -202,7 +202,7 @@ def load_lstm_batch(params, data, batchKeys, metadataStats, codesStats, executor
     :param batchKeys: list of keys for the current batch, where each key represents a temporal sequence of CNN codes and metadata
     :param metadataStats: metadata stats used to normalize metadata features
     :param codesStats: CNN codes stats used to normalize CNN codes and define the maximum number of temporal views
-    :return codesMetadata,labels: 4096-d CNN codes + metadata (if set) and labels (categorical form)
+    :return codesMetadata,labels: CNN codes + metadata (if set) and labels (categorical form)
     """
 
     if params.use_metadata:
