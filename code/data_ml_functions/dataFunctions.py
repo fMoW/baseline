@@ -128,7 +128,7 @@ def _process_file(file, slashes, root, isTrain, outDir, params):
 #        img = image.load_img(os.path.join(root, imgFile))
 #        img = image.img_to_array(img)
         img = cv2.imread(os.path.join(root, imgFile)).astype(np.float32)
-        img = img[:,:,::-1]
+    
     except:
         return noResult
 
@@ -220,7 +220,7 @@ def _process_file(file, slashes, root, isTrain, outDir, params):
 #        subImg = image.array_to_img(subImg)
 #        subImg = subImg.resize(params['target_img_size'])
 #        subImg.save(imgPath)
-        subImg = cv2.resize(subImg, params['target_img_size']).astype(np.uint8)[:,:,::-1]
+        subImg = cv2.resize(subImg, params['target_img_size']).astype(np.uint8)
         cv2.imwrite(imgPath, subImg)
 
         features = json_to_feature_vector(params, jsonData, bb)
