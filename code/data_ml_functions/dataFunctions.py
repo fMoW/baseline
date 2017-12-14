@@ -31,6 +31,8 @@ from concurrent.futures import ProcessPoolExecutor
 from functools import partial
 from tqdm import tqdm
 import warnings
+import cv2
+
 
 def prepare_data(params):
     """
@@ -123,8 +125,10 @@ def _process_file(file, slashes, root, isTrain, outDir, params):
         return noResult
 
     try:
-        img = image.load_img(os.path.join(root, imgFile))
-        img = image.img_to_array(img)
+#        img = image.load_img(os.path.join(root, imgFile))
+#        img = image.img_to_array(img)
+        img = cv2.imread(os.path.join(root, imgFile)).astype(np.float32)
+        img = img[:,:,::-1]
     except:
         return noResult
 
@@ -213,9 +217,11 @@ def _process_file(file, slashes, root, isTrain, outDir, params):
             continue
 
         subImg = img[r1:r2, c1:c2, :]
-        subImg = image.array_to_img(subImg)
-        subImg = subImg.resize(params['target_img_size'])
-        subImg.save(imgPath)
+#        subImg = image.array_to_img(subImg)
+#        subImg = subImg.resize(params['target_img_size'])
+#        subImg.save(imgPath)
+        subImg = cv2.resize(subImg, params['target_img_size']).astype(np.uint8)[:,:,::-1]
+        cv2.imwrite(imgPath, subImg)
 
         features = json_to_feature_vector(params, jsonData, bb)
         features = features.tolist()
