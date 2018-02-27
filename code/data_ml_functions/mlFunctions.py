@@ -51,9 +51,9 @@ def get_cnn_model(params):
         auxiliary_input = Input(shape=(params.metadata_length,), name='aux_input')
         modelStruct = merge([modelStruct,auxiliary_input],'concat')
 
-    modelStruct = Dense(params.cnn_last_layer_length, activation='relu', name='fc1')(modelStruct)
+    modelStruct = Dense(params.cnn_lstm_layer_length, activation='relu', name='fc1')(modelStruct)
     modelStruct = Dropout(0.5)(modelStruct)
-    modelStruct = Dense(params.cnn_last_layer_length, activation='relu', name='fc2')(modelStruct)
+    modelStruct = Dense(params.cnn_lstm_layer_length, activation='relu', name='fc2')(modelStruct)
     modelStruct = Dropout(0.5)(modelStruct)
     predictions = Dense(params.num_labels, activation='softmax')(modelStruct)
 
