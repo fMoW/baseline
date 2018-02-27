@@ -100,8 +100,6 @@ Once this is complete, the following arguments can be passed in to run different
 -nm: do not use metadata for training or testing
 ```
 
-Our best performing model is the CNN-only approach, which sums predictions over each temporal view and then takes an argmax. However, we provide code for using an LSTM, which performs slightly worse, so that modifications can be made.
-
 ## Pre-trained Models
 
 Pre-trained models can be found under Releases: [https://github.com/fMoW/baseline/releases](https://github.com/fMoW/baseline/releases)
